@@ -1,0 +1,28 @@
+{
+  "name": "data-domain-driver",
+  "version": "0.0.1",
+  "description": "DDD: DataDomainDriver, Alternative **Legacy** Stored Procedures",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmrmsys/data-domain-driver.git"
+  },
+  "keywords": [
+    "database",
+    "domain",
+    "framework"
+  ],
+  "author": "Masayoshi Nomura <nmrmsys@gmail.com> (http://github.com/nmrmsys)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nmrmsys/data-domain-driver/issues"
+  },
+  "homepage": "https://github.com/nmrmsys/data-domain-driver#readme",
+  "dependencies": {
+    "database-js": "^3.0.8",
+    "sql-behind": "^0.0.2"
+  }
+}
