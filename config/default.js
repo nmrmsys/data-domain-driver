@@ -9,7 +9,7 @@ module.exports.ddd = {
         default: 'local',
         local: {
             DriverName: 'sqlite',
-            Database: 'local.sqlite'
+            Database: 'test.sqlite'
         },
         postgres: {
             DriverName: 'postgres',

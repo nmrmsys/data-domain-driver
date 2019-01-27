@@ -3,11 +3,12 @@ var Procedure = require('../../index').Procedure;
 
 module.exports = class procA extends Procedure {
 
-    process(ddd, params, returns) {
+    async process(ddd, params, returns) {
 
         console.log('procA process');
 
-        ddd.query('queryA', {FLD1:'1', FLD2:'A'});
+        var rows = await ddd.query('queryA', {FLD1:'3', FLD2:'C'});
+        console.log('%o', rows);
 
         return 0; // returns.errorCode
     }
