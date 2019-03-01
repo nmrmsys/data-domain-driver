@@ -17,7 +17,14 @@ module.exports = class proc01 extends Procedure {
 
         await ddd.callFunction('func01', params);
 
-        // ddd._.each([1,2,3],function(v){console.log(v);});
+        _.each([1,2,3],function(v){console.log(v)});
+
+        alasql('CREATE TABLE ala_tbl (fld1 INT, fld2 INT, fld3 INT)');
+        alasql('INSERT INTO ala_tbl VALUES(1,2,3)');
+        alasql('INSERT INTO ala_tbl VALUES(4,5,6)');
+        alasql('INSERT INTO ala_tbl VALUES(7,8,9)');
+        var rows = alasql('SELECT * FROM ala_tbl');
+        console.log(rows);
 
         return 0; // returns.errorCode
     }
