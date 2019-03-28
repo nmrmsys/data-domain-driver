@@ -1,6 +1,6 @@
 {
   "name": "data-domain-driver",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "DDD: DataDomainDriver, Alternative **Legacy** Stored Procedures",
   "main": "index.js",
   "scripts": {
