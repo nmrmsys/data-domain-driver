@@ -13,6 +13,10 @@ module.exports = class procA extends Procedure {
             rs.next();
         }
 
+        // await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1', 'FLD1', {'FLD1': 'A'});
+        rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': '1'}, 'FLD1');
+        console.log(rs.rows);
+
         return 0; // returns.errorCode
     }
 
