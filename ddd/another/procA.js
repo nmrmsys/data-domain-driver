@@ -14,10 +14,16 @@ module.exports = class procA extends Procedure {
         }
 
         // rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1', 'FLD1', {'FLD1': 'A'});
-        rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1');
-        // rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': '1'}, 'FLD1');
+        // rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1');
+        rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': '2'}, 'FLD1');
         // rs = await ddd.select('TBL1', ['FLD1', 'FLD2']);
         console.log(rs.rows);
+        // await ddd.insert('TBL1', {'FLD1': '4','FLD2': 'D','FLD3': 'jkl'});
+        // await ddd.update('TBL1', {'FLD1': '1x', 'FLD2': 'Ax'}, {'FLD1': '1', 'FLD2': 'A'});
+        // await ddd.delete('TBL1', {'FLD1': '3', 'FLD2': 'C'});
+        // const ret = await ddd.get('TBL1', 'FLD2', {'FLD1': '2'});
+        // console.log(ret);
+        // await ddd.set('TBL1', {'FLD2': 'D','FLD3': 'jkl'}, {'FLD1': '4'});
 
         return 0; // returns.errorCode
     }
