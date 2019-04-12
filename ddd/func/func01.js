@@ -5,7 +5,7 @@ module.exports = class func01 extends Function {
 
     async process(ddd, params, returns) {
 
-        console.log('func01 process');
+        log('func01 process');
 
         return 0; // returns.errorCode
     }
