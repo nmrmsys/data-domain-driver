@@ -19,5 +19,8 @@ module.exports.ddd = {
             Port: 5432,
             Database: 'database'
         }
+    },
+    log: {
+        level: 'debug'
     }
 }
