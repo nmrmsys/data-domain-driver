@@ -12,6 +12,7 @@ module.exports = class procA extends Procedure {
             log(rs.FLD1, rs.FLD2, rs.FLD3);
             rs.next();
         }
+        ddd.query('SELECT * FROM TBL1');
 
         // rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1', 'FLD1', {'FLD1': 'A'});
         // rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1');
