@@ -26,7 +26,7 @@ module.exports = class proc01 extends Procedure {
         var rows = alasql('SELECT * FROM ala_tbl');
         log(rows);
 
-        return 0; // returns.errorCode
+        return 0; // returns.returnCode
     }
 
 }

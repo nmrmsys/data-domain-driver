@@ -26,7 +26,7 @@ module.exports = class procA extends Procedure {
         // log(ret);
         // await ddd.set('TBL1', {'FLD2': 'D','FLD3': 'jkl'}, {'FLD1': '4'});
 
-        return 0; // returns.errorCode
+        return 0; // returns.returnCode
     }
 
 }

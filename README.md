@@ -46,7 +46,7 @@ Class proc01 extends Procedure {
     returns.result1 = rs1;
     returns.result2 = rs2;
     
-    return 0; // returns.errorCode
+    return 0; // returns.returnCode
   }
 
 }
@@ -78,7 +78,7 @@ Class func01 extends Function {
 
     returns.resultA = params;
 
-    return 0; // returns.errorCode
+    return 0; // returns.returnCode
   }
   
 }

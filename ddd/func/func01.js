@@ -7,7 +7,7 @@ module.exports = class func01 extends Function {
 
         log('func01 process');
 
-        return 0; // returns.errorCode
+        return 0; // returns.returnCode
     }
 
 }
