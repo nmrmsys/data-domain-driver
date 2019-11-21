@@ -7,7 +7,7 @@ ds = new DataSet();
 // ds = new DataSet();
 // _.assign(ds, rtns);
 
-rs1 = new ResultSet(`
+RESULT_SET_1 = new ResultSet(`
 FLD1,FLD2,FLD3
 a,b,c
 d,e,f
@@ -19,15 +19,18 @@ FLD1,FLD2
 3,4
 `);
 
-ds.rs1 = rs1;
+ds.RESULT_SET_1 = RESULT_SET_1;
 ds.rs2 = rs2;
 ds.returnCode = 0;
 ds.returnCode2 = 0;
 
 //console.log('%O', ds);
-// console.log(rs1.dump());
+// console.log(RESULT_SET_1.dump());
 // console.log(ds.dump());
 // Utils = require('./lib/Utils');
 // console.log(Utils.dump(ds));
 
-ds.toJSON();
+// console.log(ds.toJSON());
+// console.log(ds.toJSON('RESULT_SET_1'));
+// console.log(ds.toJSON('rst=RESULT_SET_1[key]'));
+console.log('%O', ds.toObject());
