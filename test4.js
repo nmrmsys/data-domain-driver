@@ -1,6 +1,7 @@
 _ = require('lodash');
 ResultSet = require('./lib/ResultSet');
 DataSet = require('./lib/DataSet');
+Utils = require('./lib/Utils');
 
 ds = new DataSet();
 
@@ -33,4 +34,6 @@ ds.returnCode2 = 0;
 // console.log(ds.toJSON());
 // console.log(ds.toJSON('RESULT_SET_1'));
 // console.log(ds.toJSON('rst=RESULT_SET_1[key]'));
-console.log('%O', ds.toObject());
+// console.log('%O', ds.toObject());
+// console.log('ddd/model/Order'.match(/.*\/(.*)/)[0]);
+console.log('%O', Utils.toObject('../ddd/model/Order',{a:1,b:2}));
