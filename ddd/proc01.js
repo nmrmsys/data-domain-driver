@@ -16,6 +16,7 @@ module.exports = class proc01 extends Procedure {
         }
 
         await ddd.callFunction('func01', params);
+        // await ddd.callFunction('sub/func01', params);
 
         _.each([1,2,3],function(v){log(v)});
 

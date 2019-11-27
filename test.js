@@ -6,6 +6,7 @@ const DDD = new (require('./index').DDD)(config_ddd);
 
 async function main(){
     returns = await DDD.callProcedure('proc01', {prm1:'a', prm2: 'b'});
+    // returns = await DDD.callProcedure('sub/proc01', {prm1:'a', prm2: 'b'});
     returns = await DDD.domain('another').callProcedure('procA', {});
     // DDD._.each([4,5,6],function(v){console.log(v);});
     DDD.end();
