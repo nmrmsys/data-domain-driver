@@ -1,5 +1,6 @@
 // var Procedure = require('data-domain-driver').Procedure;
 var Procedure = require('../../index').Procedure;
+var ResultSet = require('../../index').ResultSet;
 
 module.exports = class procA extends Procedure {
 
@@ -12,7 +13,7 @@ module.exports = class procA extends Procedure {
             log(rs.FLD1, rs.FLD2, rs.FLD3);
             rs.next();
         }
-        ddd.query('SELECT * FROM TBL1');
+        rs = ddd.query('SELECT * FROM TBL1');
 
         // rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1', 'FLD1', {'FLD1': 'A'});
         // rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': 'A', 'FLD2': null}, 'FLD1');
@@ -27,6 +28,15 @@ module.exports = class procA extends Procedure {
         // await ddd.set('TBL1', {'FLD2': 'D','FLD3': 'jkl'}, {'FLD1': '4'});
 
         // await ddd.callFunction('func02', params);
+
+rs = new ResultSet(`
+FLD1,FLD2,FLD3
+a,b,c
+d,e,f
+g,h,i
+`);
+
+        returns.RS = rs;
 
         return 0; // returns.returnCode
     }

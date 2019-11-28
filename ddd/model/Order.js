@@ -1,17 +1,18 @@
-'use strict'
+// var Model = require('data-domain-driver').Model;
+var Model = require('../../index').Model;
 
-module.exports = class Order {
-    constructor(){
-        this._data = {};
-    }
+module.exports = class Order extends Model {
+
+    // constructor(data){
+    //     super(data);
+    // }
     
     get data(){
-        console.log('get data');
-        return this._data;
+        return super.data;
     }
     
     set data(data){
-        console.log('set data');
-        this._data = data;
+        super.data = data;
     }
+
 }

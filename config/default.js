@@ -23,4 +23,5 @@ module.exports.ddd = {
     log: {
         level: 'debug'
     }
+    //,paths: {ddd:'ddd2', func:'fn', model:'mdl'}
 }
