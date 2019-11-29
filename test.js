@@ -8,6 +8,7 @@ async function main(){
     returns = await DDD.callProcedure('proc01', {prm1:'a', prm2: 'b'});
     // returns = await DDD.callProcedure('sub/proc01', {prm1:'a', prm2: 'b'});
     returns = await DDD.domain('another').callProcedure('procA', {});
+    console.log('returns.toJSON ' + returns.toJSON('order=RS'));
     console.log('returns.toObject %O', returns.toObject('Order=RS'));
     // DDD._.each([4,5,6],function(v){console.log(v);});
     DDD.end();

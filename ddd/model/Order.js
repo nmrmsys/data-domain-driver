@@ -13,6 +13,9 @@ module.exports = class Order extends Model {
     
     set data(data){
         super.data = data;
+        // Write custom data setting if needed
     }
+
+    // Write domain logic here
 
 }
