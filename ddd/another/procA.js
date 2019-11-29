@@ -1,6 +1,5 @@
-// var Procedure = require('data-domain-driver').Procedure;
-var Procedure = require('../../index').Procedure;
-var ResultSet = require('../../index').ResultSet;
+// const Procedure = require('data-domain-driver').Procedure;
+const Procedure = require('../../index').Procedure;
 
 module.exports = class procA extends Procedure {
 

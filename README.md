@@ -10,7 +10,7 @@ $ npm install data-domain-driver
 ## Usage
 ```javascript
 // test.js
-var DDD = new (require('data-domain-driver').DDD)();
+const DDD = new (require('data-domain-driver').DDD)();
 
 returns = await DDD.callProcedure('proc01', params);
 returns = await DDD.domain('another').callProcedure('procA', params);
@@ -19,7 +19,7 @@ DDD.end();
 ```
 ```javascript
 // proc01.js
-var Procedure = require('data-domain-driver').Procedure;
+const Procedure = require('data-domain-driver').Procedure;
 
 Class proc01 extends Procedure {
 
@@ -70,7 +70,7 @@ WHERE FLD1 = :FLD1
 ```
 ```javascript
 // func01.js
-var Function = require('data-domain-driver').Function;
+const Function = require('data-domain-driver').Function;
 
 Class func01 extends Function {
   
@@ -81,6 +81,80 @@ Class func01 extends Function {
     return 0; // returns.returnCode
   }
   
+}
+```
+## One Table Query Builder
+```javascript
+// procA.js
+const Procedure = require('data-domain-driver').Procedure;
+
+Class procA extends Procedure {
+
+  async process(ddd, params, returns){
+    
+    // ddd.select(tblId, selClas, wheClas, ordClas, grpClas, havClas)
+    rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': '2'}, 'FLD1');
+
+    // ddd.insert(tblId, insClas)
+    await ddd.insert('TBL1', {'FLD1': '4','FLD2': 'D','FLD3': 'jkl'});
+
+    // ddd.update(tblId, updClas, wheClas)
+    await ddd.update('TBL1', {'FLD1': '1x', 'FLD2': 'Ax'}, {'FLD1': '1', 'FLD2': 'A'});
+
+    // ddd.delete(tblId, wheClas)
+    await ddd.delete('TBL1', {'FLD1': '3', 'FLD2': 'C'});
+
+    // ddd.get(tblId, selClas, wheClas, ordClas, grpClas, havClas)
+    v = await ddd.get('TBL1', 'FLD2', {'FLD1': '2'});
+
+    // ddd.set(tblId, setClas, wheClas)
+    await ddd.set('TBL1', {'FLD2': 'D','FLD3': 'jkl'}, {'FLD1': '4'});
+
+    return 0; // returns.returnCode
+  }
+
+}
+```
+## DataSet Anything Mapping
+```javascript
+// test.js
+const DDD = new (require('data-domain-driver').DDD)();
+returns = await DDD.callProcedure('proc01', params);
+DDD.end();
+
+// DataSet.toJSON(
+//   mainDataDef     -  'jsonName=dataName[keyName]'
+//   ,relationDefs   -  {'relationName': 'dataName[keyName]'}
+// )
+ordJson = returns.toJSON('orders=ORDERS[ORDER_ID]', {'details': 'DETAILS[ORDER_ID]'});
+
+// DataSet.toObject(
+//   mainDataDef     -  'className=dataName[keyName]'
+//   ,relationDefs   -  {'relationName': 'className=dataName[keyName]'}
+// )
+ordObj = returns.toObject('Order=ORDERS[ORDER_ID]', {'details': 'Detail=DETAILS[ORDER_ID]'});
+```
+```javascript
+// Order.js
+const Model = require('data-domain-driver').Model;
+
+module.exports = class Order extends Model {
+
+    // constructor(data){
+    //     super(data);
+    // }
+    
+    get data(){
+        return super.data;
+    }
+    
+    set data(data){
+        // super.data = data;
+        // Write custom data setting if needed
+    }
+
+    // Write domain logic here
+
 }
 ```
 

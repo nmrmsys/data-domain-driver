@@ -1,5 +1,5 @@
-// var Procedure = require('data-domain-driver').Procedure;
-var Procedure = require('../index').Procedure;
+// const Procedure = require('data-domain-driver').Procedure;
+const Procedure = require('../index').Procedure;
 
 module.exports = class proc01 extends Procedure {
 
@@ -19,7 +19,6 @@ module.exports = class proc01 extends Procedure {
         // await ddd.callFunction('sub/func01', params);
 
         _.each([1,2,3],function(v){log(v)});
-
         alasql('CREATE TABLE ala_tbl (fld1 INT, fld2 INT, fld3 INT)');
         alasql('INSERT INTO ala_tbl VALUES(1,2,3)');
         alasql('INSERT INTO ala_tbl VALUES(4,5,6)');
