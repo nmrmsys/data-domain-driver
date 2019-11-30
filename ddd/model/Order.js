@@ -1,3 +1,4 @@
+'use strict'
 // const Model = require('data-domain-driver').Model;
 const Model = require('../../index').Model;
 

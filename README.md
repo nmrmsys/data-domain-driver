@@ -7,7 +7,7 @@ DDD: Data Domain Driver, Alternative \*\*Legacy\*\* Stored Procedures
 $ npm install data-domain-driver
 ```
 
-## Usage
+## Basic Usage
 ```javascript
 // test.js
 const DDD = new (require('data-domain-driver').DDD)();
@@ -115,7 +115,7 @@ Class procA extends Procedure {
 
 }
 ```
-## DataSet Anything Mapping
+## Dataset Anything Mapping
 ```javascript
 // test.js
 const DDD = new (require('data-domain-driver').DDD)();

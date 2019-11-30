@@ -1,3 +1,4 @@
+'use strict'
 // const Procedure = require('data-domain-driver').Procedure;
 const Procedure = require('../../index').Procedure;
 
@@ -7,7 +8,7 @@ module.exports = class procA extends Procedure {
 
         log('procA process');
 
-        var rs = await ddd.query('queryA', {FLD1:'3', FLD2:'C'});
+        let rs = await ddd.query('queryA', {FLD1:'3', FLD2:'C'});
         while(!rs.EOF){
             log(rs.FLD1, rs.FLD2, rs.FLD3);
             rs.next();
@@ -27,15 +28,6 @@ module.exports = class procA extends Procedure {
         // await ddd.set('TBL1', {FLD2: 'D', FLD3: 'jkl'}, {FLD1: '4'});
 
         // await ddd.callFunction('func02', params);
-
-rs = new ResultSet(`
-FLD1,FLD2,FLD3
-a,b,c
-d,e,f
-g,h,i
-`);
-
-        returns.RS = rs;
 
         return 0; // returns.returnCode
     }
