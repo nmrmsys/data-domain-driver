@@ -93,22 +93,22 @@ Class procA extends Procedure {
   async process(ddd, params, returns){
     
     // ddd.select(tblId, selClas, wheClas, ordClas, grpClas, havClas)
-    rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {'FLD1': '2'}, 'FLD1');
+    rs = await ddd.select('TBL1', ['FLD1', 'FLD2'], {FLD1: '2'}, 'FLD1');
 
     // ddd.insert(tblId, insClas)
-    await ddd.insert('TBL1', {'FLD1': '4','FLD2': 'D','FLD3': 'jkl'});
+    await ddd.insert('TBL1', {FLD1: '4', FLD2: 'D', FLD3: 'jkl'});
 
     // ddd.update(tblId, updClas, wheClas)
-    await ddd.update('TBL1', {'FLD1': '1x', 'FLD2': 'Ax'}, {'FLD1': '1', 'FLD2': 'A'});
+    await ddd.update('TBL1', {FLD1: '1x', FLD2: 'Ax'}, {FLD1: '1', FLD2: 'A'});
 
     // ddd.delete(tblId, wheClas)
-    await ddd.delete('TBL1', {'FLD1': '3', 'FLD2': 'C'});
+    await ddd.delete('TBL1', {FLD1: '3', FLD2: 'C'});
 
     // ddd.get(tblId, selClas, wheClas, ordClas, grpClas, havClas)
-    v = await ddd.get('TBL1', 'FLD2', {'FLD1': '2'});
+    v = await ddd.get('TBL1', 'FLD2', {FLD1: '2'});
 
     // ddd.set(tblId, setClas, wheClas)
-    await ddd.set('TBL1', {'FLD2': 'D','FLD3': 'jkl'}, {'FLD1': '4'});
+    await ddd.set('TBL1', {FLD2: 'D', FLD3: 'jkl'}, {FLD1: '4'});
 
     return 0; // returns.returnCode
   }
