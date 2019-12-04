@@ -50,6 +50,10 @@ ds.returnCode2 = 0;
 // console.log('%O', Utils.toObject(ds,'ddd/model/ORDERS=DETAILS'));
 // console.log('%O', Utils.toObject(ds,['ddd/model/ORDERS','DETAILS','']));
 
+// console.log(Utils.toJSON(ds,'orders=ORDERS'));
+// console.log(Utils.toJSON(ds,'orders=ORDERS',{ORDER_ID:'1'}));
+// console.log('%O', Utils.toObject(ds,'ddd/model/Order=ORDERS',{ORDER_ID:'2'}));
+
 console.log(ds.toJSON('orders=ORDERS[ORDER_ID]',{details:'DETAILS[ORDER_ID]'}));
 // console.log('%O', Utils.toObject(ORDERS,'ddd/model/Order'));
 // console.log('%O', Utils._getFilter('', {fld1:1, fld2:2, fld3:3}, ''));
