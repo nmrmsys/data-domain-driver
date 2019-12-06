@@ -10,7 +10,7 @@ $ npm install data-domain-driver
 
 ## Quick Play
 ```
-$ git pull https://github.com/nmrmsys/data-domain-driver.git
+$ git clone https://github.com/nmrmsys/data-domain-driver.git
 $ cd data-domain-driver
 $ npm install
 $ npm test
