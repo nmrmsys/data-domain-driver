@@ -1,6 +1,5 @@
 'use strict'
-// const Model = require('data-domain-driver').Model;
-const Model = require('../../index').Model;
+const Model = require('data-domain-driver').Model;
 
 module.exports = class Order extends Model {
 

@@ -4,7 +4,16 @@ DDD: Data Domain Driver, Alternative \*\*Legacy\*\* Stored Procedures
 
 ## Installation
 ```
+$ # Configuration file and DDD definition file must be placed
 $ npm install data-domain-driver
+```
+
+## Quick Play
+```
+$ git pull https://github.com/nmrmsys/data-domain-driver.git
+$ cd data-domain-driver
+$ npm install
+$ npm test
 ```
 
 ## Basic Usage
