@@ -1,5 +1,6 @@
 'use strict'
-const Function = require('data-domain-driver').Function;
+// const Function = require('data-domain-driver').Function;
+const Function = require('../../index').Function;
 
 module.exports = class func01 extends Function {
 

@@ -1,5 +1,6 @@
 'use strict'
-const Procedure = require('data-domain-driver').Procedure;
+// const Procedure = require('data-domain-driver').Procedure;
+const Procedure = require('../index').Procedure;
 
 module.exports = class proc01 extends Procedure {
 
