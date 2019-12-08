@@ -132,16 +132,16 @@ returns = await DDD.callProcedure('proc01', params);
 DDD.end();
 
 // DataSet.toJSON(
-//   mainDataDef     -  'jsonName=dataName[keyName]'
-//   ,relationDefs   -  {'relationName': 'dataName[keyName]'}
+//   mainDataDef     -  'jsonName=dataName[keyName, ...]'
+//   ,relationDefs   -  {'relationName': 'dataName[keyName, ...]'}
 // )
-ordJson = returns.toJSON('orders=ORDERS[ORDER_ID]', {'details': 'DETAILS[ORDER_ID]'});
+ordJson = returns.toJSON('orders=ORDER[ORDER_ID]', {'details': 'DETAIL[ORDER_ID]'});
 
 // DataSet.toObject(
-//   mainDataDef     -  'className=dataName[keyName]'
-//   ,relationDefs   -  {'relationName': 'className=dataName[keyName]'}
+//   mainDataDef     -  'className=dataName[keyName, ...]'
+//   ,relationDefs   -  {'relationName': 'className=dataName[keyName, ...]'}
 // )
-ordObj = returns.toObject('Order=ORDERS[ORDER_ID]', {'details': 'Detail=DETAILS[ORDER_ID]'});
+ordObj = returns.toObject('Order=ORDER[ORDER_ID]', {'details': 'Detail=DETAIL[ORDER_ID]'});
 ```
 ```javascript
 // Order.js
