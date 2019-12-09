@@ -4,8 +4,8 @@ module.exports.ddd = {
     },
     domains: {
         // default: 'other',
-        another: {},
-        other: {path: 'oth', database:'postgres'}
+        another: {}
+        // ,other: {path: 'oth', database:'postgres'}
     },
     databases: {
         default: 'local',
@@ -25,5 +25,5 @@ module.exports.ddd = {
     log: {
         level: 'debug'
     }
-    //,paths: {ddd:'ddd2', func:'fn', model:'mdl', ddl:'ddl'}
+    //,paths: {ddd:'ddd2', func:'fn', model:'mdl', ddl:'ddl', def:'def'}
 }
