@@ -46,11 +46,11 @@ Class proc01 extends Procedure {
 
     await ddd.execute('stmt1', {FLD1:'1', FLD2:'A', FLD3:'zzz'});
 
+    ret1 = await ddd.callFunction('func01', params);
+
     await ddd.database('mydb2').execute('stmt2', params);
 
     rs2 = await ddd.database('webapi3').query('query2', params);
-
-    ret1 = await ddd.callFunction('func01', params);
 
     returns.result1 = rs1;
     returns.result2 = rs2;
