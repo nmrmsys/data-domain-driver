@@ -1,0 +1,25 @@
+MessageBag = require('./lib/MessageBag');
+
+// msgs = new MessageBag({a:['1','2','3'],b:['4','5'], c:['1']});
+msgs = new MessageBag({'a.1':['1','2','3'],'a.2':['4','5'], 'b':['1']});
+console.log(msgs._messages);
+// console.log(msgs.isUnique('b','1'));
+// console.log(msgs.add('a','1'));
+// console.log(msgs.keys());
+// console.log(msgs.merge({a:['4']}));
+// msgs2 = new MessageBag({a:['4']});
+// console.log(msgs.merge(msgs2));
+// console.log(msgs.count());
+// console.log(msgs.any());
+// console.log(msgs.isEmpty());
+// console.log('%s', msgs);
+// console.log(msgs.transform(msgs._messages['a'],'[:message]','a'));
+// console.log(msgs.all());
+// console.log(msgs.all(':key :message'));
+// console.log(msgs.unique());
+// console.log(msgs.has('d'));
+// console.log(msgs.hasAny(['a','e']));
+// console.log(msgs.first('b'));
+// console.log(msgs._Stris('atmt.*', 'atmt.zzz'));
+// console.log(msgs._getMessagesForWildcardKey('a.*', null));
+console.log(msgs.get('a.*'));
