@@ -20,6 +20,15 @@ module.exports.ddd = {
             Hostname: 'host',
             Port: 5432,
             Database: 'database'
+        },
+        webapi: {
+            DriverName: 'webapi',
+            config: {
+                baseURL: 'https://api.github.com',
+                method: 'get'
+            },
+            query1: {url: '/users/nmrmsys'},
+            stmt1: {url: '/users/nmrmsys'}
         }
     },
     log: {
