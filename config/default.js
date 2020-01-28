@@ -24,8 +24,7 @@ module.exports.ddd = {
         webapi: {
             DriverName: 'webapi',
             config: {
-                baseURL: 'https://api.github.com',
-                method: 'get'
+                baseURL: 'https://api.github.com'
             },
             query1: {url: '/users/nmrmsys'},
             stmt1: {url: '/users/nmrmsys'}
