@@ -4,6 +4,13 @@ const Procedure = require('../index').Procedure;
 
 module.exports = class proc02 extends Procedure {
 
+    params() {
+        return {
+            prm1: 'required|integer',
+            prm2: 'string'
+        }
+    }
+
     async process(ddd, params, returns) {
 
         log('proc02 process');

@@ -4,7 +4,7 @@
 const DDD = new (require('./index').DDD)();
 
 async function main(){
-    returns = await DDD.callProcedure('proc02', {prm1:'a', prm2: 'b'});
+    returns = await DDD.callProcedure('proc02', {prm1:'1', prm2: 'A'});
     DDD.end();
 }
 

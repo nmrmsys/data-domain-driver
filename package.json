@@ -36,7 +36,8 @@
     "glob": "^7.1.6",
     "lodash": "^4.17.15",
     "sql-behind": "^0.1.2",
-    "typeof": "^1.0.0"
+    "typeof": "^1.0.0",
+    "validatorjs": "^3.18.1"
   },
   "devDependencies": {}
 }

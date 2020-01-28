@@ -4,14 +4,6 @@ const Procedure = require('../index').Procedure;
 
 module.exports = class proc01 extends Procedure {
 
-    params() {
-        return {
-            name: 'required',
-            email: 'required|email',
-            age: 'min:18'
-        }
-    }
-
     async process(ddd, params, returns) {
 
         log('proc01 process');
